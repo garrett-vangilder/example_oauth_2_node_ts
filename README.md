@@ -8,4 +8,4 @@ This is an example client implementing Auth Code Grant (RFC 6749 section 4)
 - https://developer.okta.com/docs/guides/implement-grant-type/authcode/main/
 
 ### Login demo
-[![Demo](assets/example_login.mov)](assets/example_login.mov)
+[![Demo](https://youtu.be/B7GpdJTxUzY)](https://youtu.be/B7GpdJTxUzY)
