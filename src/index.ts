@@ -44,18 +44,17 @@ app.use('/authorization-code/callback', async (req, res, next) => {
         res.status(400).send("Invalid state, unable to authenticate");
         return;
     }
-    const qs = querystring.encode({
-        "grant_type": 'authorization_code',
-        "redirect_uri": `http://localhost:${port}/authorization-code/callback`,
-        "code": code as string,
-    })
+    const params = new URLSearchParams();
+    params.append('grant_type', 'authorization_code');
+    params.append('redirect_uri', `http://localhost:${port}/authorization-code/callback`);
+    params.append('code', code as string);
     let buff = new Buffer(`${clientID}:${clientSecret}`);
     let base64Secret = buff.toString('base64');
 
     try {
         const oktaResponse = await fetch(`https://${oktaDomain}/oauth2/default/v1/token`, {
             method: 'POST',
-            body: qs,
+            body: params,
             headers: {
                 'authorization': `Basic ${base64Secret}`
             }
