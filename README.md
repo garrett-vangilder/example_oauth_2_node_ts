@@ -10,19 +10,19 @@ This is an example client implementing Auth Code Grant (RFC 6749 section 4)
 ## Login demo screenshots
 
 Start the application with `npm run dev`
-![](../../../../Desktop/Screen Shot 2022-09-25 at 9.28.04 AM.png)
+![](assets/run_command.png)
 
 Client runs the app on port specified in `.env`
-![](../../../../Desktop/Screen Shot 2022-09-25 at 9.28.14 AM.png)
+![](assets/server_start.png)
 
 Visiting `/login` redirect user to okta login page
-![](../../../../Desktop/Screen Shot 2022-09-25 at 9.28.56 AM.png)
+![](assets/okta_login.png)
 
 After logging in, user is redirected back to client with a login code and the state param to prevent CSRF attacks 
-![](../../../../Desktop/Screen Shot 2022-09-25 at 9.31.29 AM.png)
+![](assets/callback_state.png)
 
 Tokens are populated by okta for the user and authentication is complete
-![](../../../../../../var/folders/y4/7mpjbjp578x1vs8lhvk3nx040000gn/T/TemporaryItems/NSIRD_screencaptureui_HG0IJH/Screen Shot 2022-09-25 at 9.33.10 AM.png)
+![](assets/tokens.png)
 
 I included a video demo, however the picture quality is incredibly poor.
 [![Demo](https://github.com/garrett-vangilder/example_oauth_2_node_ts/blob/3e3780a97907a3a67a2bb0dc18e22febe76aa412/assets/example_login.mov)](https://github.com/garrett-vangilder/example_oauth_2_node_ts/blob/3e3780a97907a3a67a2bb0dc18e22febe76aa412/assets/example_login.mov)
